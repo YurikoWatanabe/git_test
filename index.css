@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+a {
+  text-decoration: none;
+}
+
+/************************ヘッダーのメニュー************************************/
+
+.menu {
+  background-color: #ccc; /* メニューの背景色を灰色に */
+}
+
+.menu ul {
+  list-style: none; /* リストマーカーを削除 */
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block; /* メニュー項目を横並びに */
+  margin-right: 10px; /* 項目間の余白を設定 */
+}
+
+.menu a {
+  display: block; /* リンクをブロック要素に */
+  color: #fff; /* リンクの文字色を白に */
+  text-decoration: none; /* 下線を削除 */
+  padding: 10px; /* リンクのパディングを設定 */
+}
+
+/*********************************************************/
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+.conteiner {
+    margin: 0 auto;    
+}
+
+/*************************もくじ*********************************/
+.navtitle {
+  display: flex;
+}
+
+h2 {
+  color: aqua;
+  font-weight: bold;
+  border-bottom:1px solid #53dbf3;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between
+  
+}
+
+nav {
+    text-align: center;    
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+    width: 910px;
+    margin: 0 auto;
+    text-decoration-style: none;
+    list-style-type : none; 
+    
+}
+
+nav li {
+  background-color: rgb(130, 250, 204);
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex: wrap;  
+  align-items: center; 
+}
+
+li a {
+  display: block; 
+  flex-basis: 95%;
+  color: rgb(3, 31, 37);
+  font-weight: bold;
+  font-size: 20px; 
+  height: 45px;
+  
+}
+
+/*************************もくじを縦にする*********************************/
+.vertical {
+  flex-direction: column;
+}
+
+/*********************吹き出し 全体**********************/
+.chat {
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.chat:before, .chat:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+/*アイコン*/
+.chat figure {
+  width: 60px;
+  height: 60px;
+}
+
+.chat-icon-saru-left, .chat-icon-usa-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.chat-icon-usa-right, .chat-icon-saru-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.chat figure img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 2px solid #aaaaaa;
+  border-radius: 50%;
+}
+
+/*吹き出しのセリフ部分*/
+.chat-talk-left, .chat-talk-left-ye, .chat-talk-right, .chat-talk-right-bu {
+  position: relative;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  max-width: calc(100% - 80px);
+}
+
+.chat p {
+  margin: 0;
+}
+
+.chat p:last-child {
+  margin: 0;
+}
+
+
+/*****************吹き出し　左・青***************************/
+
+/*吹き出し（左・青）*/
+.chat-talk-left {
+  float: left;
+  border-width: 2px;
+  border-color: rgb(18, 161, 218);
+  background: rgb(18, 161, 218);
+}
+
+/*吹き出し（左・青）三角*/
+.chat-talk-left:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid rgb(18, 161, 218);
+  top: 15px;
+  left: -22px;
+}
+
+.chat-talk-left:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid rgb(18, 161, 218);
+  top: 15px;
+  left: -19px;
+}
+
+/*****************吹き出し　左・黄色***************************/
+
+/*吹き出し（左・黄色）*/
+.chat-talk-left-ye {
+  float: left;
+  border-width: 2px;
+  border-color: khaki;
+  background: khaki;
+}
+
+/*吹き出し（左・黄色）三角*/
+.chat-talk-left-ye:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid khaki;
+  top: 15px;
+  left: -22px;
+}
+
+.chat-talk-left-ye:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid khaki;
+  top: 15px;
+  left: -19px;
+}
+
+/*****************吹き出し　右・青***************************/
+
+/*吹き出し（右・青）*/
+.chat-talk-right-bu {
+  float: right;
+  border-width: 2px;
+  border-color: rgb(18, 161, 218);
+  background: rgb(18, 161, 218);
+}
+
+/*吹き出し（右・青）三角*/
+.chat-talk-right-bu:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid rgb(18, 161, 218);
+  top: 15px;
+  right: -22px;
+}
+
+.chat-talk-right-bu:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid rgb(18, 161, 218);
+  top: 15px;
+  right: -19px;
+}
+
+
+/*****************吹き出し　右・黄色***************************/
+
+/*吹き出し（右・黄色）*/
+.chat-talk-right {
+  float: right;
+  border-width: 2px;
+  border-color: khaki;
+  background: khaki;
+}
+
+/*吹き出し（右・黄色）三角*/
+.chat-talk-right:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid khaki;
+  top: 15px;
+  right: -22px;
+}
+
+.chat-talk-right:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid khaki;
+  top: 15px;
+  right: -19px;
+}

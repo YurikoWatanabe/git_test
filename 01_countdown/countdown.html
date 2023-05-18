@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>カウントダウンタイマー</title>
+</head>
+<body>
+<a id="top"></a>
+    <header>
+         <!--メインメニュー-->
+         <div class="menu">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="countdown.html">カウントダウンタイマー</a></li>
+                <li><a href="../02_pulldown/pulldown.html">プルダウンメニュー</a></li>
+                <li><a href="../03_cookie/cookie.html">プライバシーポリシー承認パネル</a></li>
+                <li><a href="../04_thumb/thumb.html">イメージの切り替え</a></li>
+                <li><a href="../05_slide/slide.html">スライドショー</a></li>
+                <li><a href="../06_reference/reference.html">参考資料</a></li>
+            </ul>
+            </div>
+    </header>    
+    <main class="container">
+        <h1>カウントダウンタイマー</h1>
+        <!--サンプル画面表示-->
+        <div class="sample">
+        <p class="today"><span id="today"></span></p>
+        <p class="timer"><i class="fa-solid fa-bomb"></i></i><span id="timer2"></span></p> 
+        </div>
+    </div>
+    <section>
+        <!--さる（左）-->
+        <div class="chat">
+            <figure class="chat-icon-saru-left">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-left"> 
+                <p>か、カウントダウンタイマー？なんか怖い</p>
+            </div>
+        </div>    
+        <!--うさ（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-right">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-right">
+                <p>引き算すればいいのよ</p>
+            </div>
+        </div>
+        <!---さる（左）-->
+        <div class="chat">
+            <figure class="chat-icon-saru-left">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-left"> 
+                <p>ちょっと何言ってるか分かりません</p>
+            </div>
+        </div>
+        <!--うさ（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-right">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-right">
+                <p>今日の終わりの時間ひく現在の時間よ！</p>
+            </div>
+        </div>
+        <!--さる（左）-->
+        <div class="chat">
+            <figure class="chat-icon-saru-left">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-left"> 
+                <p>・・・・・</p>
+            </div>
+        </div>
+        <!--うさ（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-right">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-right">
+                <p>考えるな！感じろ！</p>
+            </div>
+        </div>
+    </section>
+    <!--もくじ-->
+    <div class="navtitle">
+        <h2>Curriculum</h2>
+    </div>
+    <nav class="nav">
+    <ul  class="vertical">
+        <li><a href="#section1">タイムスタンプにして引き算</a></li>
+        <li><a href="#section2">引き算した結果を時、分、秒に計算しなおす</a></li>
+        <li><a href="#section3">テンプレートリテラルでテキストを作成する</a></li>
+        <li><a href="#section4">htmlを書き換える</a></li>
+        <li><a href="#section5">別の表示方法</a></li>
+        <li><a href="../06_reference/reference.html">参考資料</a></li>
+    </ul>
+    </nav>
+<!--解説 section1-->
+<section>
+<h3 id="section1">タイムスタンプにして引き算</h3>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>まずは現在の日時を取得しましょう。<br>日時を取得するには、Dateオブジェクトをインスタンス化して使います！</p>        
+        </div>
+    </div>
+<!--書式-->
+<p class="format">書式<samp><span class="marker">new Date()</span></samp>
+</p>
+
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//現在の日時を取得</span>
+    const now = <span class="marker">new Date();</span>
+    <span class="sup">//コンソールに出力</span>
+    console.log(now);
+
+    //出力結果：<span class="marker">Wed May 10 2023 17:31:18 GMT+0900 (日本標準時)</span>
+</pre>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>引き算するために、<span class="comme">タイムスタンプ</span><span class="tooltip hidden">→1970年1月1日0時0分から数えて何ミリ秒経過したかを表す数値</span>にしてみましょう！
+            <br>タイムスタンプを取得するには、getTime()メソッドを使います。</p>        
+    </div>
+</div>
+
+<!--書式-->
+<blockquote>
+    <p class="getmethod pointer" id="get">Dateオブジェクトから日時を取得できるget～()メソッド例<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN<br>
+        <div class="gettime hidden">
+            <samp>getFullYear()</samp>
+            <samp class="support">年（西暦）を取得する</samp><br>
+            <samp>getMonth()</samp>
+            <samp class="support">月を0～11の数値で取得する（0が1月）</samp><br>
+            <samp>getDate()</samp>
+            <samp class="support">日を取得する</samp><br>
+            <samp>getDay()</samp>
+            <samp class="support">曜日を0～6の数値で取得する（0が日曜日）</samp><br>
+            <samp>getHours()</samp>
+            <samp class="support">時を取得する</samp><br>
+            <samp>getMinutes(分)</samp>
+            <samp class="support">分を取得する</samp><br>
+            <samp>getSeconds(秒)</samp>
+            <samp class="support">秒を取得する</samp><br>
+            <samp>getMilliseconds()</samp>
+            <samp class="support">ミリ秒を0～999の数値で取得する</samp><br>
+            <samp>getTimezoneOffset()</samp>
+            <samp class="support">時差を取得する</samp><br>
+            <samp><span class="marker">getTime()</span></samp>
+            <samp class="support">1970年1月1日0時からの時間をミリ秒で取得する</samp><br>
+            <cite>(参考：狩野裕東『確かな力が身につくJavaScript「超」入門 第2版』SB Creative、2019年、P169）</cite>
+        </div>
+    </p>
+</blockquote> 
+
+<!--書式-->
+<p class="format">書式
+    <samp><span class="marker">new Date().getTime()</span></samp>
+</p>
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//現在の日時を取得</span>
+    const now = new Date();
+    <span class="sup">//タイムスタンプを取得＆コンソールに出力</span>
+    console.log(<span class="marker">now.getTime()</span>);
+    
+    //出力結果：<span class="marker">1683768506024</span>
+</pre>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>1970年1月1日0時0分から今現在まで、<br>
+            1683768506024<span class="comme">ミリ秒</span><span class="tooltip hidden">→1000分の1秒</span>経過しているということが分かりました。<br>
+            </p>       
+        </div>
+    </div>
+
+    <!--さる（右）-->
+    <div class="chat">    
+        <figure class="chat-icon-saru-right">
+            <img src="../icon/study_animal_saru.png" alt="さる">
+        </figure>
+        <div class="chat-talk-right-bu">
+            <p>え？分からないんですけど…</p>   
+        </div>
+    </div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>未来や過去の日時を取得したい場合は、<br>
+        <a href="#set">対応したset～()メソッド</a>を使って設定したあと、<br>
+        <a href="#get">対応したget～()メソッド</a>を使って取得します。</p>       
+    </div>
+</div>
+
+
+   <!--書式-->
+   <blockquote>
+        <p class="setmethod pointer" id="set">Dateオブジェクトから日時を設定できるset～()メソッド例<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN<br>
+            <div class="settime hidden">
+                <samp>setFullYear(年)</samp>
+                <samp class="support">年（西暦）を設定する</samp><br>
+                <samp>setMonth(月)</samp>
+                <samp class="support">月を0～11の数値で設定する</samp><br>
+                <samp>setDate(日)</samp>
+                <samp class="support">日を設定する</samp><br>
+                <samp><span class="marker">setHours(時)</span></samp>
+                <samp class="support">時を設定する</samp><br>
+                <samp><span class="marker">setMinutes(分)</span></samp>
+                <samp class="support">分を設定する</samp><br>
+                <samp><span class="marker">setSeconds(秒)</span></samp>
+                <samp class="support">秒を設定する</samp><br>
+                <cite>(参考：狩野裕東『確かな力が身につくJavaScript「超」入門 第2版』SB Creative、2019年、P169）</cite>
+            </div>
+        </p>
+    </blockquote> 
+<!--コード-->   
+<span class="file-type">JAVASCRIPT</span>                
+<pre class="prettyprint lang-js"> 
+    <span class="sup">//現在の日時を取得</span>                   
+    const goal = new Date();
+
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    <span class="marker">
+    goal.setHours(23);  
+    goal.setMinutes(59);
+    goal.setSeconds(59);</span>
+    <span class="sup">//コンソールに出力</span>
+    console.log(goal);
+
+    //出力結果：<span class="marker">Thu May 11 2023 23:59:59 GMT+0900 (日本標準時)</span>
+</pre>
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>一日の終わり時刻が設定できたら、こちらもタイムスタンプにしましょう！</p>   
+            </div>
+        </div>
+<!--コード--> 
+<span class="file-type">JAVASCRIPT</span>       
+<pre class="prettyprint lang-js">
+    <span class="sup">//現在の日時を取得</span>
+    const goal = new Date();
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    goal.setHours(23);
+    goal.setMinutes(59);
+    goal.setSeconds(59);
+    
+    <span class="sup">//タイムスタンプを取得＆コンソールに出力</span>
+    console.log(<span class="marker">goal.getTime()</span>);
+
+    //出力結果：<span class="marker">1683817199360</span>
+</pre>
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>これで引き算できますね！</p>   
+            </div>
+        </div>
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//現在の日時を取得</span>
+    const now = new Date();               
+    const goal = new Date();
+    
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    goal.setHours(23);
+    goal.setMinutes(59);
+    goal.setSeconds(59);
+
+    <span class="sup">//タイムスタンプにし、未来から現在を引き算</span>
+    const diff = <span class="marker">goal.getTime() - now.getTime();</span>
+
+    <span class="sup">//コンソールに出力</span>
+    console.log(deff);
+
+    //出力結果：<span class="marker">46048000</span>
+</pre>
+</section>
+<section>
+<h3 id="section2">引き算した結果を時、分、秒に計算しなおす</h3>
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>引き算した結果を、表示させたい単位に計算します！</p>   
+            </div>
+        </div>
+        <!--さる（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-saru-right">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-right-bu">
+                <p>何言ってるか分かんないですね…</p>   
+            </div>
+        </div>
+
+        <!--脳トレ（開閉ボタン）-->
+        <h4 class="thinking pointer">ちょっと脳トレ<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</h4>
+            <div class="text-container hidden">
+                <!--うさ（左）-->
+                <div class="chat">    
+                    <figure class="chat-icon-usa-left">
+                        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                    </figure>
+                    <div class="chat-talk-left-ye">
+                        <p>23時間59分59秒は何ミリ秒でしょうか？</p>   
+                    </div>
+                </div>
+                <!--脳トレ問題1～3-->
+                <div class="format">
+                <p>計算してみよう<i class="fa-solid fa-computer-mouse"></i></i><span class="info">問題クリックで答えが見れます</span></p>
+                    <samp class="que">23時間59分59秒は何分でしょうか？</samp>            
+                    <span class="ans hidden">23×60+59+59秒=1439分59秒</span>
+                    <br>
+
+                    <samp class="que">1439分59秒は何秒でしょうか？</samp>
+                    <span class="ans hidden">1439×60+59=86399秒</span>
+                    <br>
+
+                    <samp class="que">86399秒何ミリ秒でしょうか？</samp>
+                    <span class="ans hidden">86399×1000=86399000ミリ秒！</span>
+                </div>
+                <!--さる（右）-->
+                <div class="chat">    
+                    <figure class="chat-icon-saru-right">
+                        <img src="../icon/study_animal_saru.png" alt="さる">
+                    </figure>
+                    <div class="chat-talk-right-bu">
+                        <p>な、何が起きているんだ</p>   
+                    </div>
+                </div>
+
+                <!--うさ（左）-->
+                <div class="chat">    
+                    <figure class="chat-icon-usa-left">
+                        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                    </figure>
+                    <div class="chat-talk-left-ye">
+                        <p>ミリ秒が分かったら、今度は逆パターンで計算してみましょう！</p>   
+                    </div>
+                </div>
+
+                <!--脳トレ問題4-->
+                <div class="format">
+                    <p>計算してみよう<i class="fa-solid fa-computer-mouse"></i></i><span class="info">問題クリックで答えが見れます</span></p>
+                    <samp id="click4" class="que">86399000ミリ秒は何秒でしょうか？</samp>            
+                    <span class="ans hidden">86399000÷1000=86399秒！</span>              
+                </div>
+
+                <!--うさ（左）-->
+                <div class="chat">    
+                    <figure class="chat-icon-usa-left">
+                        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                    </figure>
+                    <div class="chat-talk-left-ye">
+                        <p>掛け算じゃなくて割り算すれば求められるわね！<br>ここからちょっと難しいかも？</p>   
+                    </div>
+                </div>
+
+                <!--さる（右）-->
+                <div class="chat">    
+                    <figure class="chat-icon-saru-right">
+                        <img src="../icon/study_animal_saru.png" alt="さる">
+                    </figure>
+                    <div class="chat-talk-right-bu">
+                        <p>な、何言ってんだこいつ</p>   
+                    </div>
+                </div>
+
+                <!--脳トレ問題5～-->
+                <div class="format">
+                    <p>計算してみよう<i class="fa-solid fa-computer-mouse"></i></i><span class="info">問題クリックで答えが見れます</span></p>
+                        <samp id="click5" class="que">86399秒は何時間何分何秒でしょうか？</samp> 
+                        <div class="hidden">           
+                        <span class="ans">86399÷60=1439余り59なので59秒</span><br>    
+                        <span class="ans">86399÷60÷60=23余り59なので59分</span><br>  
+                        <span class="ans">86399÷60÷60÷24=0余り23なので23時間</span>   
+                        </div>
+                </div>
+
+                <!--うさ（左）-->
+                <div class="chat">    
+                    <figure class="chat-icon-usa-left">
+                        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                    </figure>
+                    <div class="chat-talk-left-ye">
+                        <p>61秒が何分か？を求めたい場合、1分60秒なので60で割った商が分に繰り上がり、<br>
+                        余った数は秒のまま残るわよね。逆に言うと、1～59の範囲で秒を求めたい場合、<br>
+                        60で割って余りを求めれば良いってわけ。86399秒も同じ理屈よ！
+                        </p>   
+                    </div>
+                </div>
+                <!--さる（右）-->
+                <div class="chat">    
+                    <figure class="chat-icon-saru-right">
+                        <img src="../icon/study_animal_saru.png" alt="さる">
+                    </figure>
+                    <div class="chat-talk-right-bu">
+                        <p>なるほど分からん</p>   
+                    </div>
+                </div>
+                <!--うさ（左）-->
+                <div class="chat">    
+                    <figure class="chat-icon-usa-left">
+                        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                    </figure>
+                    <div class="chat-talk-left-ye">
+                        <p>脳トレは以上です！お疲れ様でした。</p>   
+                    </div>
+                </div>
+        </div>
+        <!--ちょっと脳トレ・開閉ボタン-->
+        <div class="close-container">
+            <button class="close-button pointer">ちょっと脳トレ<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</button>
+        </div>
+               <!--うさ（左）-->
+               <div class="chat">    
+                <figure class="chat-icon-usa-left">
+                    <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+                </figure>
+                <div class="chat-talk-left-ye">
+                    <p>さきほど引き算した46048000ミリ秒を計算し、<br>
+                        配列に格納したのが次のコードです。</p>   
+                </div>
+            </div> 
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//現在の日時を取得</span>
+    const now = new Date();               
+    const goal = new Date();
+    
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    goal.setHours(23);
+    goal.setMinutes(59);
+    goal.setSeconds(59);
+
+    <span class="sup">//タイムスタンプにし、未来から現在を引き算</span>
+    const diff = goal.getTime() - now.getTime();
+    
+    <span class="sup">//秒、分、時、日を計算</span>
+    <span class="marker">
+    const sec = Math.floor(diff / 1000) % 60;            
+    const min = Math.floor(diff / 1000 / 60) % 60;       
+    const hours = Math.floor(diff / 1000 / 60 / 60) % 24;</span>
+    <span class="sup">//日は必ず0になるはずだが、念のため計算する</span>
+    <span class="marker">
+    const days = Math.floor(diff / 1000 / 60 / 60 / 24); </span>
+
+    <span class="sup">//配列に格納し、中身を見てみる</span>
+    <span class="marker">const count = [days, hours, min, sec];</span>
+    console.log(count);
+    //出力結果：<span class="marker">(4) [0, 7, 0, 36]</span>
+</pre>
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>計算後にMath.floor()メソッドで小数点を切り捨てているのは、<br>
+        コンピューター側の事情で誤差が出る場合があるからです。</p>   
+    </div>
+</div> 
+
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>大人の事情…的な？</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>配列の結果から、<br>
+            本日の残り時間が0日7時間0分36秒ということが分かりましたね！</p>   
+    </div>
+</div> 
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>いえ、分かりません</p>   
+    </div>
+</div>
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>あとはこのコードを関数にして使いやすくしましょう！<br>
+        ファンクション名は<span class="bold">countdowe()</span>、仮引数は<span class="bold">due</span>にしています。</p>   
+    </div>
+</div> 
+                
+                
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    'use strict';
+    
+    <span class="sup">//計算して結果を配列で返すcountdown()関数を作る</span>    
+    <span class="marker">function countdown(due) {</span>
+        <span class="sup">//現在の日時</span>
+        const now = new Date();
+        
+        const diff =<span class="sup">//未来-現在</span> 
+        due.getTime() - now.getTime();
+        <span class="sup">//秒、分、時、日を計算</span>
+        const sec = Math.floor(rest / 1000) % 60;
+        const min = Math.floor(rest / 1000 / 60) % 60;
+        const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+        const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+        <span class="sup">//配列に格納</span>
+        <span class="marker">const count = [days, hours, min, sec];
+        return count;                         
+    }                                         </span>
+
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    const goal = new Date();
+    goal.setHours(23);
+    goal.setMinutes(59);
+    goal.setSeconds(59);
+    
+    <span class="sup">//countdown()関数の呼び出し</span>
+    <span class="marker">countdown(goal);</span>                
+</pre>
+</section>
+<section>
+<h3 id="section3">テンプレートリテラルでテキストを作成する</h3>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>配列のデータを取り出して文字列にしましょう。</p>
+    </div>
+</div> 
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>配列…</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>文字列を作るときは、ダブルクォーテーションか<br>
+            シングルクォーテーションで囲むことが多いですが…</p>
+    </div>
+</div> 
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>そうなの？</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p><span class="comme">バッククォート<span class="bold">``</span></span><span class="tooltip hidden">→Shift+＠</span>で囲むことで、<br>
+           便利な<span class="comme">テンプレートリテラル</span><span class="tooltip hidden">→${}内に変数を埋め込んだり、ファンクションを呼び出したりできるため、文字列連結が不要</span>
+           を作ることができます！</p>
+    </div>
+</div> 
+                
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//呼び出した関数を定数counterに格納</span>
+    const counter = countdown(goal);
+
+    <span class="sup">//counterから値を1つずつ取り出し、テンプレートリテラルでテキストを作る＆コンソールに出力</span>
+    console.log(<span class="marker">`${counter[1]}時間${counter[2]}分${counter[3]}秒`</span>);
+
+    //出力結果：<span class="marker">3時間52分32秒</span>
+</pre>
+</section>
+<section>
+<h3 id="section4">htmlを書き換える</h3>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>本日の残り時間は3時間52分32秒ということが分かりました！<br>
+            以下のhtmlに反映させてみましょう。</p>
+    </div>
+</div>                 
+<!--コードHTML-->
+<span class="file-type">HTML</span>
+<pre class="prettyprint lang-html5">
+&lt;p&gt;残り時間&gt;</span>&lt;span <span class="marker">id="timer"></span>&lt;/span&gt;&lt;/p&gt;
+</pre>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>id#timerをgetElementByIdで呼び出し、書き換えを行ないます。</p>
+    </div>
+</div>   
+
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js">
+    <span class="sup">//テンプレートリテラルで作ったテキストを定数timeに代入</span>
+    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+
+    <span class="sup">//id#timerで取得したhtmlに定数timeを代入</span>
+    <span class="marker">document.getElementById('timer').textContent = time;</span>
+</pre>
+                <!--サンプル画面表示-->
+                <p class="sample">残り時間<span id="timer"></span></p>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>ちゃんと表示されましたね！<br>
+        ブラウザを更新するたび、残り時間が変化していくはずです。</p>
+    </div>
+</div>
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>使えないということだけは分かります。</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p><span class="comme">setTimeout()メソッド</span>
+        <span class="tooltip hidden">→指定したファンクションをもう一度実行してくれる</span>をうまく使えば、<br>
+        1秒ごとに新しい残り時間を表示させることができます。</p>
+    </div>
+</div>
+<!--書式-->
+<p class="format">書式　「待ち時間」後に、「ファンクション」を一度だけ実行する<samp>setTimeout(ファンクション名, 待ち時間)</samp>
+</p>
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>ファンクション名は<span class="bold">()無し</span>、待ち時間は<span class="bold">ミリ秒単位</span>で書きます。</p>
+    </div>
+</div>
+<!--脳トレその2（開閉ボタン）-->
+<h4 class="thinking pointer">ちょっと脳トレ<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</h4>
+<div class="text-container hidden">
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">            
+            <p>例えば、ファンクションAとファンクションBがあったとします。</p>   
+        </div>
+    </div>
+    <!--脳トレ・ファンクションAB-->
+    <div class="box-container">
+        <div class="box">
+            <h2>A</h2>
+            <p>・計算する</p>
+        </div>
+        <div class="box">
+            <h2>B</h2>
+            <p>・1秒後に1度だけAを実行する</p>
+        </div>
+    </div>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>ファンクションAに、以下の処理を追加するとどうでしょう？</p>   
+        </div>
+    </div>
+
+    <!--脳トレ・ファンクションAB-->
+    <div class="box-container">
+        <div class="box">
+            <h2>A</h2>
+            <p>・計算する</p>
+            <p>・Bを呼び出す</p>
+
+        </div>
+        <div class="box">
+            <h2>B</h2>
+            <p>・1秒後に1度だけAを実行する</p>
+        </div>
+    </div>
+
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>この状態でファンクションAを呼び出すと…</p>   
+        </div>
+    </div>
+
+    <ol>
+        <li>計算する</li>
+        <li>Bを呼び出す</li>
+        <li>1秒後にAを実行する</li>
+        <li>計算する</li>
+        <li>Bを呼び出す</li>
+        <li>以下略…</li>
+    </ol>
+
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>setTimeout()メソッド をどう使えば良いか、<br>
+                イメージがわいてきたのではないでしょうか？</p>   
+        </div>
+    </div>
+
+    <!--さる（右）-->
+    <div class="chat">    
+        <figure class="chat-icon-saru-right">
+            <img src="../icon/study_animal_saru.png" alt="さる">
+        </figure>
+        <div class="chat-talk-right-bu">
+            <p>全然イメージわきません！</p>   
+        </div>
+    </div>
+
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>脳トレお疲れ様でした～！</p>   
+        </div>
+    </div>
+</div>
+<!--ちょっと脳トレ開閉ボタン-->
+<div class="close-container pointer">
+<button class="close-button ">ちょっと脳トレ<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</button>
+</div> 
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>setTimeout()メソッドをどのように使えば良いのか？<br>
+        考えながら、これまでのコードを振り返ってみましょう！</p>   
+    </div>
+</div>
+
+<!--コード-->
+<span class="file-type">JAVASCRIPT</span>
+<pre class="prettyprint lang-js  linenums">
+    'use strict';
+    
+    <span class="sup">//計算して結果を配列で返すcountdown()関数を作る</span>
+    function countdown(due) {
+        <span class="sup">//現在の日時</span>
+        const now = new Date();
+        <span class="sup">//未来-現在</span>
+        const diff = due.getTime() - now.getTime();
+        <span class="sup">//秒、分、時、日を計算</span>
+        const sec = Math.floor(rest / 1000) % 60;
+        const min = Math.floor(rest / 1000 / 60) % 60;
+        const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+        const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+        <span class="sup">//配列に格納</span>
+        const count = [days, hours, min, sec];
+        return count;
+    }
+    
+    <span class="sup">//今日の終わりの時刻を設定</span>
+    const goal = new Date();
+    goal.setHours(23);
+    goal.setMinutes(59);
+    goal.setSeconds(59);
+    
+    <span class="sup">//countdown()関数の呼び出し</span>
+    countdown(goal); 
+<div class="marker">
+    <span class="sup">//呼び出した関数を定数counterに格納</span>
+    const counter = countdown(goal);
+    
+    <span class="sup">//テンプレートリテラルで作ったテキストを定数timeに代入</span>
+    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+    
+    <span class="sup">//idで取得したhtmlに定数timeを代入</span>
+    document.getElementById('timer').textContent = time;
+    </pre>
+</div>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>28行目から35行目に注目してください！<br>
+            未来時刻 - 現在時刻の結果を配列として返すファンクションを実行後、<br>
+            テンプレートリテラルを作成、htmlに反映させています。</p>   
+        </div>
+    </div>
+    <!--さる（右）-->
+    <div class="chat">    
+        <figure class="chat-icon-saru-right">
+            <img src="../icon/study_animal_saru.png" alt="さる">
+        </figure>
+        <div class="chat-talk-right-bu">
+            <p>よく分かりませんね…</p>   
+        </div>
+    </div>
+    <!--うさ（左）-->
+    <div class="chat">    
+        <figure class="chat-icon-usa-left">
+            <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+        </figure>
+        <div class="chat-talk-left-ye">
+            <p>➀28行目～35行目をまとめてファンクションにする<br>
+               ➁setTimeout()メソッドを実行するファンクションを作る<br>
+               ➂➁で作ったファンクションを➀に追加する<br>
+               こうすれば、半永久的に➀の処理が繰り返されます！</p>   
+        </div>
+    </div>
+<!--コード-->      
+<span class="file-type">JAVASCRIPT</span>          
+<pre class="prettyprint lang-js">
+    <span class="sup">//まとめてrecalc()にする</span>
+    <span class="marker">function recalc() {</span>
+    const counter = countdown(goal);
+    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+    document.getElementById('timer').textContent = time;
+    <span class="sup">//refresh()を追加する</span>
+    <span class="marker">refresh();</span>
+    <span class="marker">}         </span>                        
+
+    <span class="sup">//setTimeoutメソッドの第1引数にrecalc、待ち時間に1000ミリ秒を指定</span>
+    <span class="marker">function refresh() {
+        setTimeout(recalc, 1000);        
+    }</span>
+</pre>
+<p class="sample">残り時間<span id="timer3"></span></p>
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>なんか違和感が…</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>今の状態だと、残りの秒数が1桁になったときに<br>
+        変な感じになっちゃいますね。</p>   
+    </div>
+</div>
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>眠くなってきました…</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>String()関数とpadStart()メソッドを<br>
+        使うと、表示したい文字列の桁数を揃えることができます！</p>   
+    </div>
+</div>
+
+<!--書式-->
+<p class="format">書式
+    <samp>String(文字列に変換したいデータ)</samp>
+    <samp class="support">引数のデータを文字列に変換する</samp><br>
+    <samp>padStart(揃える文字数、埋め合わせ用の文字)</samp>
+    <samp class="support">文字数に満たない場合、埋め合わせ用の文字列を表示させる</samp><br>
+</p>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>「秒」の部分を文字列に変換し、<br>
+            1桁になった場合'0'という文字列が表示されるようにしてみましょう。</p>   
+    </div>
+</div>
+
+<!--コード-->   
+<span class="file-type">JAVASCRIPT</span>             
+<pre class="prettyprint lang-js">
+<span class="sup">//まとめてrecalc()にする</span>
+function recalc() {
+const counter = countdown(goal);
+<span class="sup">//String()関数、padStartメソッドを追加</span>
+const time = `${counter[1]}時間${counter[2]}分${<span class="marker">String(counter[3]).padStart(2, '0')</span>}秒`;
+document.getElementById('timer').textContent = time;
+<span class="sup">//refresh()を追加する</span>
+refresh();
+}
+
+<span class="sup">//setTimeoutメソッドの第1引数にrecalc、待ち時間に1000ミリ秒を指定</span>
+function refresh() {
+    setTimeout(recalc, 1000);
+}ル
+</pre>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>秒数の表示部分を2文字に揃え、<br>
+        足りない場合に'0'を表示させたいので…<br>
+        padStart()引数にはそれぞれ2と'0'を記述しています。</p>   
+    </div>
+</div>
+
+<!--サンプル画面表示-->
+<p class="sample">残り時間<span id="timer4"></span></p>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>できました！やったー！</p>   
+    </div>
+</div>
+</section>
+<section>
+<h3 id="section5">別の表示方法</h3>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>これまでは、
+        <br>new Date()でインスタンス化<br>
+        ↓<br>
+        .set～()のメソッドで設定<br>
+        ↓<br>
+        get～()でデータを取得<br><br>
+        というやり方でした。            
+        </p>   
+    </div>
+</div>
+
+<!--さる（右）-->
+    <div class="chat">    
+        <figure class="chat-icon-saru-right">
+            <img src="../icon/study_animal_saru.png" alt="さる">
+        </figure>
+        <div class="chat-talk-right-bu">
+            <p>そうだったんですか！？</p>   
+        </div>
+    </div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>まずはこれまでのやり方で<br>
+        2023年12月31日23時59分59秒を取得してみましょう！
+        </p>            
+    </div>
+</div>
+
+<!--コードHTML-->   
+<span class="file-type">HTML</span>             
+<pre class="prettyprint lang-js">
+    &lt;p class="lastyear" id="last">&lt;/p&gt;
+</pre>
+
+<!--コード-->   
+<span class="file-type">JAVASCRIPT</span>             
+<pre class="prettyprint lang-js">
+<span class="sup">//set～()メソッドを使って2023年12月31日23時59分59秒を設定する</span>
+const thisyear = new Date();
+thisyear.setFullYear(2023);
+<span class="sup">//0~11で設定する（0が1月）</span>
+thisyear.setMonth(11);
+thisyear.setDate(31);
+thisyear.setHours(23);
+thisyear.setMinutes(59);
+thisyear.setSeconds(59);
+
+<span class="sup">//get～()メソッドを使って2023年12月31日23時59分59秒を取得する</span>
+const year = thisyear.getFullYear();
+const lastmonth = thisyear.getMonth() + 1;
+const lastday = thisyear.getDate();
+const lasthour = thisyear.getHours();
+const lastminute = thisyear.getMinutes();
+const lastsecond = thisyear.getSeconds();
+
+<span class="sup">//テンプレートリテラルを作り、htmlに反映させる</span>
+const last = `${year}年${lastmonth}月${lastday}日 ${lasthour}：${lastminute}:${lastsecond}秒`;
+document.getElementById('last').textContent = last;
+</pre>
+
+<!--サンプル画面表示//set～メソッド使用-->
+<div class="sample">
+    <p id="last"></p>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>月は0から11で指定するので、<br>
+        get～()のときに+ 1 が必要です！</p>            
+    </div>
+</div>
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>忘れそうです…</p>   
+    </div>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>今度は別のやり方で<br>
+            2023年12月31日23時59分59秒を取得してみましょう！<br>
+            new Date()の引数に日時を設定し、get～()を使います。<br>
+        </p>            
+    </div>
+</div>
+
+<!--コードHTML-->   
+<span class="file-type">HTML</span>             
+<pre class="prettyprint lang-js">
+    &lt;p class="thisyear">
+    &lt;span id="thisyear"&gt;&lt;/span&gt;年&lt;span id="thismonth"&gt;&lt;/span&gt;月&lt;span id="thisday"&gt;&lt;/span&gt;日 &lt;span id="thishour"&gt;&lt;/span&gt;：&lt;span id="thisminute"&gt;&lt;/span&gt;：&lt;span id="thissecond"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+</pre>
+
+<!--コード-->   
+<span class="file-type">JAVASCRIPT</span>             
+<pre class="prettyprint lang-js">
+<span class="sup">//new Date()の引数に2023年12月31日 23：59：59を設定する</span>
+<span class="sup">//0~11で設定する（0が1月）</span>
+const thisyear = new Date(2023, 11, 31, 23, 59, 59);
+
+<span class="sup">//get～()メソッドを使って2023年12月31日23時59分59秒を取得し、htmlに反映させる</span>
+document.getElementById('thisyear').textContent = thisyear2.getFullYear();
+document.getElementById('thismonth').textContent = thisyear2.getMonth() + 1; 
+document.getElementById('thisday').textContent = thisyear2.getDate();
+document.getElementById('thishour').textContent = thisyear2.getHours();
+document.getElementById('thisminute').textContent = thisyear2.getMinutes();
+document.getElementById('thissecond').textContent = thisyear2.getSeconds();
+</pre>
+
+<!--サンプル画面表示-->
+<div class="sample">
+    <p class="thisyear">
+        <span id="thisyear"></span>年<span id="thismonth"></span>月<span id="thisday"></span>日 <span id="thishour"></span>：<span id="thisminute"></span>：<span id="thissecond"></span>
+    </p>
+</div>
+
+<!--うさ（左）-->
+<div class="chat">    
+    <figure class="chat-icon-usa-left">
+        <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+    </figure>
+    <div class="chat-talk-left-ye">
+        <p>取得できました！お疲れ様です！</p>            
+    </div>
+</div>
+
+<!--さる（右）-->
+<div class="chat">    
+    <figure class="chat-icon-saru-right">
+        <img src="../icon/study_animal_saru.png" alt="さる">
+    </figure>
+    <div class="chat-talk-right-bu">
+        <p>お休みなさい…</p>   
+    </div>
+</div>
+</section>
+</main>
+
+<a href="#top">ページのトップへ戻る</a>
+<footer>
+    <div class="container">
+        <p>&copy; 2023</p>
+    </div>
+</footer>
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="countdown.js"></script>
+</body>
+</html>

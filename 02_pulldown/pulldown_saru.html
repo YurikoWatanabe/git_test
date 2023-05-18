@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="img.css">
+    <title>さるプロフィールのページ</title>
+</head>
+<body class="pull_saru">
+<a id="top"></a>
+    <header>
+        <!--メインメニュー-->
+        <div class="menu">
+           <ul>
+               <li><a href="../index.html">HOME</a></li>
+               <li><a href="../01_countdown/countdown.html">カウントダウンタイマー</a></li>
+               <li><a href="pulldown.html">プルダウンメニュー</a></li>
+               <li><a href="../03_cookie/cookie.html">プライバシーポリシー承認パネル</a></li>
+               <li><a href="../04_thumb/thumb.html">イメージの切り替え</a></li>
+               <li><a href="../05_slide/slide.html">スライドショー</a></li>
+               <li><a href="../06_reference/reference.html">参考資料</a></li>
+           </ul>
+        </div>
+   </header>
+   <main class="container">
+    <!--サンプル画面表示--> 
+    <h2>さるプロフィールのページ</h2>
+    <form id="form">
+        <select name="select">
+            <option value="pulldown.html">プルダウンメニュー</option>
+            <option value="pulldown_saru.html">さるプロフィール</option>
+            <option value="pulldown_usa.html">うさプロフィール</option>
+        </select>
+    </form>
+
+    <section>
+        <!--プロフィール写真-->
+        <div class="center">
+            <div>
+                <img src="img/monkey_doup.jpg" id="bigimg" alt="さるアップ">
+            </div>
+
+        <ul class="line">
+            <li><img src="img/monkey_doup.jpg" class="thumb" data-prof="img/monkey_doup.jpg" alt="さるアップ"></li>
+            <li><img src="img/monkey_mirror.jpg" class="thumb" data-prof="img/monkey_mirror.jpg" alt="さる鏡"></li>
+            <li><img src="img/monkey_zzz.jpg" class="thumb" data-prof="img/monkey_zzz.jpg" alt="さる寝る"></li>            
+        </ul>
+        </div>
+
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>やだイケメン…</p>   
+            </div>
+        </div>
+
+        <!--さる（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-saru-right">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-right-bu">
+                <p>写真集を出す予定です。</p>   
+            </div>
+        </div>
+        
+  
+<main class="container">
+    <section>
+
+    </section>
+    </div>
+</main>
+<a href="#top">ページのトップへ戻る</a>
+<footer>
+    <div class="container">
+        <p>&copy; 2023</p>
+    </div>
+</footer>
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="pulldown.js"></script>
+</body>
+</html>

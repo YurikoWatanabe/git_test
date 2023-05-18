@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="img.css">
+    <title>プルダウンメニュー</title>
+</head>
+<body class="pull_top">
+<a id="top"></a>
+    <header>
+        <!--メインメニュー-->
+        <div class="menu">
+           <ul>
+               <li><a href="../index.html">HOME</a></li>
+               <li><a href="../01_countdown/countdown.html">カウントダウンタイマー</a></li>
+               <li><a href="pulldown.html">プルダウンメニュー</a></li>
+               <li><a href="../03_cookie/cookie.html">プライバシーポリシー承認パネル</a></li>
+               <li><a href="../04_thumb/thumb.html">イメージの切り替え</a></li>
+               <li><a href="../05_slide/slide.html">スライドショー</a></li>
+               <li><a href="../06_reference/reference.html">参考資料</a></li>
+           </ul>
+        </div>
+   </header>
+<main class="container">
+    <section>
+    <h1>プルダウンメニュー</h1>    
+    <!--サンプル画面表示--> 
+    <h2>プルダウンメニューのページ</h2>
+    <form id="form">
+        <select name="select">
+            <option value="pulldown.html">プルダウンメニュー</option>
+            <option value="pulldown_saru.html">さるプロフィール</option>
+            <option value="pulldown_usa.html">うさプロフィール</option>
+        </select>
+    </form>
+    </section>
+    <section>
+        <!--さる（左）-->
+        <div class="chat">
+            <figure class="chat-icon-saru-left">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-left"> 
+                <p>ぷ、プルダウンメニュー？なんか強そう</p>
+            </div>
+        </div>    
+        <!--うさ（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-right">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-right">
+                <p>複数の選択肢があるフォームなんかも、<br>
+                少ないスペースで作れるので便利ですね！</p>
+            </div>
+        </div>        
+    </section>
+    <!--もくじ-->
+    <div class="navtitle">
+        <h2>Curriculum</h2>
+    </div>
+    <nav class="nav">
+    <ul>
+        <li><a href="#section1">&lt;select&gt;タグについて</a></li>
+        <li><a href="#section2">イベントの設定</a></li>
+        <li><a href="#section3">データの取得</a></li>
+        <li><a href="#section4">URLの書き換え</a></li>
+        <li><a href="#section5">selected属性を動的に付ける</a></li>
+        <li><a href="../06_reference/reference.html">参考資料</a></li>
+    </ul>
+    </nav>
+    
+    <!--解説 section1-->
+    <section>
+        <h3 id="section1">&lt;select&gt;タグについて</h3>
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>プルダウンメニューを作るため、<br>
+                まずはformタグの中にselectタグとoptionタグを<br>
+                書きましょう！
+                </p>
+            </div>
+        </div>
+        <!--さる（右）-->
+        <div class="chat">    
+            <figure class="chat-icon-saru-right">
+                <img src="../icon/study_animal_saru.png" alt="さる">
+            </figure>
+            <div class="chat-talk-right-bu">
+                <p>何ですかそれ？</p>   
+            </div>
+        </div>   
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>今回用意したメニューは3つ。<br>
+                1番目の選択肢はこのページ自身、<br>
+                2番目の選択肢はさる氏のプロフィールページ、<br>
+                3番目の選択肢は私うさのプロフィールページです。！
+                </p>
+            </div>
+        </div> 
+<!--コードHTML-->
+<span class="file-type">pulldown.html</span>
+<pre class="prettyprint lang-html5">
+    &lt;form id="form">
+        &lt;select <span class="marker">name="select"</span>>
+            &lt;option <span class="marker">value="pulldown.html"</span>>プルダウンメニュー&lt;/option>
+            &lt;option <span class="marker">value="pulldown_saru.html"</span>>さるプロフィール&lt;/option>
+            &lt;option <span class="marker">value="pulldown_usa.html"</span>>うさプロフィール&lt;/option>
+        &lt;/select>
+    &lt;/form>
+</pre>
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>selectタグのname属性はプルダウンメニューの名前、<br>
+                optionタグのvalue属性は選択肢の値（ファイル名）です。
+                </p>
+            </div>
+        </div>    
+        
+<!--コードHTML-->
+<span class="file-type">pulldown_saru.html</span>
+<pre class="prettyprint lang-html5">
+&lt;!--さるプロフィール写真--&gt;
+&lt;div class="center">
+    &lt;div>
+        &lt;img src="img/monkey_doup.jpg" id="bigimg" alt="さるアップ">
+    &lt;/div>
+
+    &lt;ul class="line">
+        &lt;li&gt;&lt;img src="img/monkey_doup.jpg" class="thumb" data-prof="img/monkey_doup.jpg" alt="さるアップ">&lt;/li>
+        &lt;li&gt;&lt;img src="img/monkey_mirror.jpg" class="thumb" data-prof="img/monkey_mirror" alt="さる鏡">&lt;/li>
+        &lt;li&gt;&lt;img src="img/monkey_zzz.jpg" class="thumb" data-prof="img/monkey_zzz" alt="さる寝る">&lt;/li>            
+    &lt;/ul>
+&lt;/div>
+</pre> 
+<!--コードHTML-->
+<span class="file-type">pulldown_usa.html</span>
+<pre class="prettyprint lang-html5">
+&lt;!--うさプロフィール写真--&gt;
+&lt;div class="center">
+    &lt;div>
+        &lt;img src="img/rabbit_front.jpg" id="bigimg" alt="うさ正面">
+    &lt;/div>
+
+    &lt;ul class="line">
+        &lt;li&gt;&lt;img src="img/rabbit_front.jpg" class="thumb" data-prof="img/rabbit_front.jpg" alt="うさ正面">&lt;/li>
+        &lt;li&gt;&lt;img src="img/rabbit_left.jpg" class="thumb" data-prof="img/rabbit_left" alt="うさ左向き">&lt;/li>
+        &lt;li&gt;&lt;img src="img/rabbit_right.jpg" class="thumb" data-prof="img/rabbit_right" alt="うさ右向き">&lt;/li>            
+    &lt;/ul>
+&lt;/div>
+</pre> 
+    </section>
+    <!--解説 section2-->
+    <section>
+        <h3 id="section2">イベントの設定</h3>        
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>jsファイルで、イベントの設定をしましょう！<br>
+                .onchangeイベントは、フォームに入力された内容<br>
+                が変わったときに発生します。
+                </p>
+            </div>
+        </div> 
+        <!--書式-->
+        <p class="format">書式　onchangeイベント
+            <samp>取得した要素<span class="marker">.onchange</span> = function() {<br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;//イベント発生時の処理<br><br>
+                  };</samp>            
+        </p>  
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>フォーム要素の部品を取得するには、<br>
+                フォーム部品のname属性を指定します。
+                </p>
+            </div>
+        </div>
+        <!--書式-->
+        <p class="format">書式　getElementByIdでform要素の部品を取得する場合
+            <samp>document.getElementById('formタグのID名')<span class="marker">.selectタグのname属性</span>.onchange = function() {<br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;//イベント発生時の処理<br><br>
+                  };</samp>            
+        </p> 
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p><span class="boldblue">//イベント発生時に行なう処理</span>のところに<br>
+                「選択されているoptionタグのvalue属性を調べ、URLを書き換える」<br>
+                と記述することで、ページが切り替わります。
+                </p>
+            </div>
+        </div>  
+        <!--うさ（左）-->
+        <div class="chat">    
+            <figure class="chat-icon-usa-left">
+                <img src="../icon/eto_usagi_head.png" alt="うさぎ">
+            </figure>
+            <div class="chat-talk-left-ye">
+                <p>optionタグのvalue属性の値を取得するには、<br>
+                selectタグのvalueプロパティを読み取ります。
+                </p>
+            </div>
+        </div>  
+        
+        <!--valueプロパティとvalue属性（開閉ボタン）-->
+        <h4 class="thinking pointer">valueプロパティとvalue属性<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</h4>
+            <div class="text-container hidden">
+                
+		    </div>
+        <!--valueプロパティとvalue属性（開閉ボタン）-->    
+        <div class="close-container">
+            <button class="close-button pointer">valueプロパティとvalue属性<i class="fa-solid fa-computer-mouse"></i>クリックでOPEN</button>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+</main>
+<a href="#top">ページのトップへ戻る</a>
+<footer>
+    <div class="container">
+        <p>&copy; 2023</p>
+    </div>
+</footer>
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="pulldown.js"></script>
+</body>
+</html>
