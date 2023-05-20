@@ -29,8 +29,8 @@
         <h1>カウントダウンタイマー</h1>
         <!--サンプル画面表示-->
         <div class="sample">
-        <p class="today"><span id="today"></span></p>
-        <p class="timer"><i class="fa-solid fa-bomb"></i></i><span id="timer2"></span></p> 
+        <p class="today"><span id="today"></span>は、</p>
+        <p class="timer">あと <i class="fa-solid fa-bomb"></i></i><span id="timer2"></span> で終わります。</p> 
         </div>
     </div>
     <section>
@@ -135,7 +135,7 @@
             <img src="../icon/eto_usagi_head.png" alt="うさぎ">
         </figure>
         <div class="chat-talk-left-ye">
-            <p>引き算するために、<span class="comme">タイムスタンプ</span><span class="tooltip hidden">→1970年1月1日0時0分から数えて何ミリ秒経過したかを表す数値</span>にしてみましょう！
+            <p>引き算するために、<span class="comme">タイムスタンプ</span><span class="tooltip hidden">→1970年1月1日0時0分から<br>数えて何ミリ秒経過したかを<br>表す数値</span>にしてみましょう！
             <br>タイムスタンプを取得するには、getTime()メソッドを使います。</p>        
     </div>
 </div>
@@ -622,7 +622,7 @@
     </figure>
     <div class="chat-talk-left-ye">
         <p><span class="comme">バッククォート<span class="bold">``</span></span><span class="tooltip hidden">→Shift+＠</span>で囲むことで、<br>
-           便利な<span class="comme">テンプレートリテラル</span><span class="tooltip hidden">→${}内に変数を埋め込んだり、ファンクションを呼び出したりできるため、文字列連結が不要</span>
+           便利な<span class="comme">テンプレートリテラル</span><span class="tooltip hidden">→${}内に変数を埋め込んだり、<br>ファンクションを呼び出したりできるため、<br>文字列連結が不要</span>
            を作ることができます！</p>
     </div>
 </div> 
@@ -707,7 +707,7 @@
     </figure>
     <div class="chat-talk-left-ye">
         <p><span class="comme">setTimeout()メソッド</span>
-        <span class="tooltip hidden">→指定したファンクションをもう一度実行してくれる</span>をうまく使えば、<br>
+        <span class="tooltip hidden">→指定したファンクションを<br>もう一度実行してくれる</span>をうまく使えば、<br>
         1秒ごとに新しい残り時間を表示させることができます。</p>
     </div>
 </div>
@@ -1004,7 +1004,7 @@ refresh();
 <span class="sup">//setTimeoutメソッドの第1引数にrecalc、待ち時間に1000ミリ秒を指定</span>
 function refresh() {
     setTimeout(recalc, 1000);
-}ル
+}
 </pre>
 
 <!--うさ（左）-->
@@ -1077,7 +1077,7 @@ function refresh() {
 <!--コードHTML-->   
 <span class="file-type">HTML</span>             
 <pre class="prettyprint lang-js">
-    &lt;p class="lastyear" id="last">&lt;/p&gt;
+&lt;p class="lastyear" id="last">&lt;/p&gt;
 </pre>
 
 <!--コード-->   
@@ -1148,9 +1148,9 @@ document.getElementById('last').textContent = last;
 <!--コードHTML-->   
 <span class="file-type">HTML</span>             
 <pre class="prettyprint lang-js">
-    &lt;p class="thisyear">
-    &lt;span id="thisyear"&gt;&lt;/span&gt;年&lt;span id="thismonth"&gt;&lt;/span&gt;月&lt;span id="thisday"&gt;&lt;/span&gt;日 &lt;span id="thishour"&gt;&lt;/span&gt;：&lt;span id="thisminute"&gt;&lt;/span&gt;：&lt;span id="thissecond"&gt;&lt;/span&gt;
-    &lt;/p&gt;
+&lt;p class="thisyear">
+&lt;span id="thisyear"&gt;&lt;/span&gt;年&lt;span id="thismonth"&gt;&lt;/span&gt;月&lt;span id="thisday"&gt;&lt;/span&gt;日 &lt;span id="thishour"&gt;&lt;/span&gt;：&lt;span id="thisminute"&gt;&lt;/span&gt;：&lt;span id="thissecond"&gt;&lt;/span&gt;
+&lt;/p&gt;
 </pre>
 
 <!--コード-->   
