@@ -62,7 +62,7 @@ nav ul {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
-    width: 910px;
+    width: 90%;
     margin: 0 auto;
     text-decoration-style: none;
     list-style-type : none; 
@@ -263,4 +263,16 @@ li a {
   top: 15px;
   right: -19px;
 }
-/**/
+
+/*************************************************************/
+/*スマホ用*/
+/*************************************************************/
+
+@media (max-width: 600px) {
+  /*ヘッダー*/
+  .menu li {
+    display: block; /*メニュー項目を縦並びに*/
+  }
+
+
+}
