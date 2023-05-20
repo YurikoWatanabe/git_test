@@ -162,8 +162,8 @@ li a {
 .chat-talk-left {
   float: left;
   border-width: 2px;
-  border-color: rgb(18, 161, 218);
-  background: rgb(18, 161, 218);
+  border-color: rgb(161, 220, 243);
+  background: rgb(161, 220, 243);
 }
 
 /*吹き出し（左・青）三角*/
@@ -171,7 +171,7 @@ li a {
   position: absolute;
   content: '';
   border: 10px solid transparent;
-  border-right: 10px solid rgb(18, 161, 218);
+  border-right: 10px solid rgb(161, 220, 243);
   top: 15px;
   left: -22px;
 }
@@ -180,7 +180,7 @@ li a {
   position: absolute;
   content: '';
   border: 10px solid transparent;
-  border-right: 10px solid rgb(18, 161, 218);
+  border-right: 10px solid rgb(161, 220, 243);
   top: 15px;
   left: -19px;
 }
@@ -220,8 +220,8 @@ li a {
 .chat-talk-right-bu {
   float: right;
   border-width: 2px;
-  border-color: rgb(18, 161, 218);
-  background: rgb(18, 161, 218);
+  border-color: rgb(161, 220, 243);
+  background: rgb(161, 220, 243);
 }
 
 /*吹き出し（右・青）三角*/
@@ -229,7 +229,7 @@ li a {
   position: absolute;
   content: '';
   border: 10px solid transparent;
-  border-left: 10px solid rgb(18, 161, 218);
+  border-left: 10px solid rgb(161, 220, 243);
   top: 15px;
   right: -22px;
 }
@@ -238,7 +238,7 @@ li a {
   position: absolute;
   content: '';
   border: 10px solid transparent;
-  border-left: 10px solid rgb(18, 161, 218);
+  border-left: 10px solid rgb(161, 220, 243);
   top: 15px;
   right: -19px;
 }

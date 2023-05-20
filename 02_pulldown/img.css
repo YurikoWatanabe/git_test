@@ -1,4 +1,17 @@
 @charset "utf-8";
+/*プルダウン*/
+#form select {
+    width: 200px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(0, 6, 8);
+    background-color: rgb(213, 252, 205);
+    border: 1px solid rgb(247, 251, 252);
+    border-radius: 10px;
+    padding: 5px;
+    outline: 2px solid rgb(3, 93, 57);
+}
+
 
 /*プロフィール画像*/
 section img {
@@ -11,8 +24,9 @@ section img {
     width: 500px;
 }
 
-.bigimg {
-    height: auto;
+#bigimg {
+    height: 350px;
+    width: 500px;
 }
 
 ul.line {
