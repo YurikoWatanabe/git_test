@@ -97,6 +97,12 @@ li a {
 .chat {
   margin-bottom: 2em;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.chat.r {
+  flex-direction: row-reverse;
 }
 
 .chat:before, .chat:after {
@@ -109,6 +115,7 @@ li a {
 .chat figure {
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 }
 
 .chat-icon-saru-left, .chat-icon-usa-left {
@@ -118,7 +125,7 @@ li a {
 
 .chat-icon-usa-right, .chat-icon-saru-right {
   float: right;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .chat figure img {
@@ -136,6 +143,8 @@ li a {
   border-style: solid;
   border-radius: 10px;
   max-width: calc(100% - 80px);
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .chat p {
