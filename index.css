@@ -373,25 +373,10 @@ li a {
     display: none;
 }
 
-/*コードの装飾*/
-pre {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-family: 'Courier New', monospace;
-    font-size: 17px;
-    color: #333;
-  }
-
-pre .sup {
-    font-size: 5px;
-}
-
-li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+/*コードの装飾?*/
+/* li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 	list-style-type: decimal !important;
-}
-
+} */
 
 /*「書式」の装飾*/
 samp {
@@ -399,7 +384,7 @@ samp {
     color: blue;
     padding: 5px;
     font-size: 20px;
-  }
+  }  
 
 .format {
     color: rgb(83, 28, 9);
@@ -531,25 +516,7 @@ samp.support {
     margin-right: 10px;
     margin-bottom: 10px;
   }  
-
-  /*コードのファイルの種類*/
-  .file-type {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 12px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #939191;
-    border-radius: 3px;
-  }
-
-  pre {
-    margin-top: 0; 
-    max-width: 100%;   
-    overflow-x: auto;
-  }
-
+  
   /*フッター*/
   footer {
     background-color: #f2f2f2;

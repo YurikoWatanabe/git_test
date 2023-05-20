@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../prism.css">
     <title>カウントダウンタイマー</title>
 </head>
 <body>
@@ -119,15 +120,14 @@
 </p>
 
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//現在の日時を取得</span>
-    const now = <span class="marker">new Date();</span>
-    <span class="sup">//コンソールに出力</span>
-    console.log(now);
+<pre><code class="language-JavaScript">
+//現在の日時を取得
+const now = new Date();
+//コンソールに出力
+console.log(now);
 
-    //出力結果：<span class="marker">Wed May 10 2023 17:31:18 GMT+0900 (日本標準時)</span>
-</pre>
+//出力結果：Wed May 10 2023 17:31:18 GMT+0900 (日本標準時)
+</code></pre>
     <!--うさ（左）-->
     <div class="chat">    
         <figure class="chat-icon-usa-left">
@@ -173,15 +173,14 @@
     <samp><span class="marker">new Date().getTime()</span></samp>
 </p>
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//現在の日時を取得</span>
-    const now = new Date();
-    <span class="sup">//タイムスタンプを取得＆コンソールに出力</span>
-    console.log(<span class="marker">now.getTime()</span>);
-    
-    //出力結果：<span class="marker">1683768506024</span>
-</pre>
+<pre><code class="language-JavaScript">
+//現在の日時を取得
+const now = new Date();
+//タイムスタンプを取得＆コンソールに出力
+console.log(now.getTime());
+
+//出力結果：1683768506024
+</code></pre>
     <!--うさ（左）-->
     <div class="chat">    
         <figure class="chat-icon-usa-left">
@@ -238,21 +237,19 @@
         </p>
     </blockquote> 
 <!--コード-->   
-<span class="file-type">JAVASCRIPT</span>                
-<pre class="prettyprint lang-js"> 
-    <span class="sup">//現在の日時を取得</span>                   
-    const goal = new Date();
+<pre><code class="language-JavaScript"> 
+//現在の日時を取得                   
+const goal = new Date();
 
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    <span class="marker">
-    goal.setHours(23);  
-    goal.setMinutes(59);
-    goal.setSeconds(59);</span>
-    <span class="sup">//コンソールに出力</span>
-    console.log(goal);
+//今日の終わりの時刻を設定
+goal.setHours(23);  
+goal.setMinutes(59);
+goal.setSeconds(59);
+//コンソールに出力
+console.log(goal);
 
-    //出力結果：<span class="marker">Thu May 11 2023 23:59:59 GMT+0900 (日本標準時)</span>
-</pre>
+//出力結果：Thu May 11 2023 23:59:59 GMT+0900 (日本標準時)
+</code></pre>
         <!--うさ（左）-->
         <div class="chat">    
             <figure class="chat-icon-usa-left">
@@ -263,20 +260,19 @@
             </div>
         </div>
 <!--コード--> 
-<span class="file-type">JAVASCRIPT</span>       
-<pre class="prettyprint lang-js">
-    <span class="sup">//現在の日時を取得</span>
-    const goal = new Date();
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    goal.setHours(23);
-    goal.setMinutes(59);
-    goal.setSeconds(59);
-    
-    <span class="sup">//タイムスタンプを取得＆コンソールに出力</span>
-    console.log(<span class="marker">goal.getTime()</span>);
+<pre><code class="language-JavaScript">
+//現在の日時を取得
+const goal = new Date();
+//今日の終わりの時刻を設定
+goal.setHours(23);
+goal.setMinutes(59);
+goal.setSeconds(59);
 
-    //出力結果：<span class="marker">1683817199360</span>
-</pre>
+//タイムスタンプを取得＆コンソールに出力
+console.log(goal.getTime());
+
+//出力結果：1683817199360
+</code></pre>
         <!--うさ（左）-->
         <div class="chat">    
             <figure class="chat-icon-usa-left">
@@ -287,25 +283,24 @@
             </div>
         </div>
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//現在の日時を取得</span>
-    const now = new Date();               
-    const goal = new Date();
-    
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    goal.setHours(23);
-    goal.setMinutes(59);
-    goal.setSeconds(59);
+<pre><code class="language-JavaScript">
+//現在の日時を取得
+const now = new Date();               
+const goal = new Date();
 
-    <span class="sup">//タイムスタンプにし、未来から現在を引き算</span>
-    const diff = <span class="marker">goal.getTime() - now.getTime();</span>
+//今日の終わりの時刻を設定
+goal.setHours(23);
+goal.setMinutes(59);
+goal.setSeconds(59);
 
-    <span class="sup">//コンソールに出力</span>
-    console.log(deff);
+//タイムスタンプにし、未来から現在を引き算
+const diff = goal.getTime() - now.getTime();
 
-    //出力結果：<span class="marker">46048000</span>
-</pre>
+//コンソールに出力
+console.log(deff);
+
+//出力結果：46048000
+</code></pre>
 </section>
 <section>
 <h3 id="section2">引き算した結果を時、分、秒に計算しなおす</h3>
@@ -458,34 +453,31 @@
                 </div>
             </div> 
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//現在の日時を取得</span>
-    const now = new Date();               
-    const goal = new Date();
-    
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    goal.setHours(23);
-    goal.setMinutes(59);
-    goal.setSeconds(59);
+<pre><code class="language-JavaScript">
+//現在の日時を取得
+const now = new Date();               
+const goal = new Date();
 
-    <span class="sup">//タイムスタンプにし、未来から現在を引き算</span>
-    const diff = goal.getTime() - now.getTime();
-    
-    <span class="sup">//秒、分、時、日を計算</span>
-    <span class="marker">
-    const sec = Math.floor(diff / 1000) % 60;            
-    const min = Math.floor(diff / 1000 / 60) % 60;       
-    const hours = Math.floor(diff / 1000 / 60 / 60) % 24;</span>
-    <span class="sup">//日は必ず0になるはずだが、念のため計算する</span>
-    <span class="marker">
-    const days = Math.floor(diff / 1000 / 60 / 60 / 24); </span>
+//今日の終わりの時刻を設定
+goal.setHours(23);
+goal.setMinutes(59);
+goal.setSeconds(59);
 
-    <span class="sup">//配列に格納し、中身を見てみる</span>
-    <span class="marker">const count = [days, hours, min, sec];</span>
-    console.log(count);
-    //出力結果：<span class="marker">(4) [0, 7, 0, 36]</span>
-</pre>
+//タイムスタンプにし、未来から現在を引き算
+const diff = goal.getTime() - now.getTime();
+
+//秒、分、時、日を計算
+const sec = Math.floor(diff / 1000) % 60;            
+const min = Math.floor(diff / 1000 / 60) % 60;       
+const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+//日は必ず0になるはずだが、念のため計算する
+const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+
+//配列に格納し、中身を見てみる
+const count = [days, hours, min, sec];
+console.log(count);
+//出力結果：(4) [0, 7, 0, 36]
+</code></pre>
 <!--うさ（左）-->
 <div class="chat">    
     <figure class="chat-icon-usa-left">
@@ -539,36 +531,33 @@
                 
                 
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    'use strict';
-    
-    <span class="sup">//計算して結果を配列で返すcountdown()関数を作る</span>    
-    <span class="marker">function countdown(due) {</span>
-        <span class="sup">//現在の日時</span>
-        const now = new Date();
-        
-        const diff =<span class="sup">//未来-現在</span> 
-        due.getTime() - now.getTime();
-        <span class="sup">//秒、分、時、日を計算</span>
-        const sec = Math.floor(rest / 1000) % 60;
-        const min = Math.floor(rest / 1000 / 60) % 60;
-        const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
-        const days = Math.floor(rest / 1000 / 60 / 60 / 24);
-        <span class="sup">//配列に格納</span>
-        <span class="marker">const count = [days, hours, min, sec];
-        return count;                         
-    }                                         </span>
+<pre><code class="language-JavaScript">
+'use strict';
 
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    const goal = new Date();
-    goal.setHours(23);
-    goal.setMinutes(59);
-    goal.setSeconds(59);
-    
-    <span class="sup">//countdown()関数の呼び出し</span>
-    <span class="marker">countdown(goal);</span>                
-</pre>
+//計算して結果を配列で返すcountdown()関数を作る    
+function countdown(due) {
+    //現在の日時
+    const now = new Date();
+    //未来-現在
+    const diff = due.getTime() - now.getTime();
+    //秒、分、時、日を計算
+    const sec = Math.floor(rest / 1000) % 60;
+    const min = Math.floor(rest / 1000 / 60) % 60;
+    const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+    const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+    //配列に格納
+    const count = [days, hours, min, sec];
+    return count;                         
+} 
+//今日の終わりの時刻を設定
+const goal = new Date();
+goal.setHours(23);
+goal.setMinutes(59);
+goal.setSeconds(59);
+
+//countdown()関数の呼び出し
+countdown(goal);                
+</code></pre>
 </section>
 <section>
 <h3 id="section3">テンプレートリテラルでテキストを作成する</h3>
@@ -627,16 +616,15 @@
 </div> 
                 
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//呼び出した関数を定数counterに格納</span>
-    const counter = countdown(goal);
+<pre><code class="language-JavaScript">
+//呼び出した関数を定数counterに格納
+const counter = countdown(goal);
 
-    <span class="sup">//counterから値を1つずつ取り出し、テンプレートリテラルでテキストを作る＆コンソールに出力</span>
-    console.log(<span class="marker">`${counter[1]}時間${counter[2]}分${counter[3]}秒`</span>);
+//counterから値を1つずつ取り出し、テンプレートリテラルでテキストを作る＆コンソールに出力
+console.log(`${counter[1]}時間${counter[2]}分${counter[3]}秒`);
 
-    //出力結果：<span class="marker">3時間52分32秒</span>
-</pre>
+//出力結果：<span class="marker">3時間52分32秒</span>
+</code></pre>
 </section>
 <section>
 <h3 id="section4">htmlを書き換える</h3>
@@ -652,10 +640,9 @@
     </div>
 </div>                 
 <!--コードHTML-->
-<span class="file-type">HTML</span>
-<pre class="prettyprint lang-html5">
-&lt;p&gt;残り時間&gt;</span>&lt;span <span class="marker">id="timer"></span>&lt;/span&gt;&lt;/p&gt;
-</pre>
+<pre><code class="language-html">
+&lt;p&gt;残り時間&gt;&lt;span id="timer">&lt;/span&gt;&lt;/p&gt;
+</code></pre>
 
 <!--うさ（左）-->
 <div class="chat">    
@@ -668,14 +655,13 @@
 </div>   
 
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js">
-    <span class="sup">//テンプレートリテラルで作ったテキストを定数timeに代入</span>
-    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+<pre><code class="language-JavaScript">
+//テンプレートリテラルで作ったテキストを定数timeに代入
+const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
 
-    <span class="sup">//id#timerで取得したhtmlに定数timeを代入</span>
-    <span class="marker">document.getElementById('timer').textContent = time;</span>
-</pre>
+//id#timerで取得したhtmlに定数timeを代入
+document.getElementById('timer').textContent = time;
+</code></pre>
                 <!--サンプル画面表示-->
                 <p class="sample">残り時間<span id="timer"></span></p>
 
@@ -834,54 +820,52 @@
         考えながら、これまでのコードを振り返ってみましょう！</p>   
     </div>
 </div>
-
 <!--コード-->
-<span class="file-type">JAVASCRIPT</span>
-<pre class="prettyprint lang-js  linenums">
-    'use strict';
-    
-    <span class="sup">//計算して結果を配列で返すcountdown()関数を作る</span>
-    function countdown(due) {
-        <span class="sup">//現在の日時</span>
-        const now = new Date();
-        <span class="sup">//未来-現在</span>
-        const diff = due.getTime() - now.getTime();
-        <span class="sup">//秒、分、時、日を計算</span>
-        const sec = Math.floor(rest / 1000) % 60;
-        const min = Math.floor(rest / 1000 / 60) % 60;
-        const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
-        const days = Math.floor(rest / 1000 / 60 / 60 / 24);
-        <span class="sup">//配列に格納</span>
-        const count = [days, hours, min, sec];
-        return count;
-    }
-    
-    <span class="sup">//今日の終わりの時刻を設定</span>
-    const goal = new Date();
-    goal.setHours(23);
-    goal.setMinutes(59);
-    goal.setSeconds(59);
-    
-    <span class="sup">//countdown()関数の呼び出し</span>
-    countdown(goal); 
-<div class="marker">
-    <span class="sup">//呼び出した関数を定数counterに格納</span>
-    const counter = countdown(goal);
-    
-    <span class="sup">//テンプレートリテラルで作ったテキストを定数timeに代入</span>
-    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
-    
-    <span class="sup">//idで取得したhtmlに定数timeを代入</span>
-    document.getElementById('timer').textContent = time;
-    </pre>
-</div>
+<pre class="line-numbers"><code class="language-JavaScript">
+'use strict';
+
+//計算して結果を配列で返すcountdown()関数を作る
+function countdown(due) {
+    //現在の日時
+    const now = new Date();
+    //未来-現在
+    const diff = due.getTime() - now.getTime();
+    //秒、分、時、日を計算
+    const sec = Math.floor(rest / 1000) % 60;
+    const min = Math.floor(rest / 1000 / 60) % 60;
+    const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+    const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+    //配列に格納
+    const count = [days, hours, min, sec];
+    return count;
+}
+
+//今日の終わりの時刻を設定
+const goal = new Date();
+goal.setHours(23);
+goal.setMinutes(59);
+goal.setSeconds(59);
+
+//countdown()関数の呼び出し
+countdown(goal); 
+
+//呼び出した関数を定数counterに格納
+const counter = countdown(goal);
+
+//テンプレートリテラルで作ったテキストを定数timeに代入
+const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+
+//idで取得したhtmlに定数timeを代入
+document.getElementById('timer').textContent = time;
+
+</code></pre>
     <!--うさ（左）-->
     <div class="chat">    
         <figure class="chat-icon-usa-left">
             <img src="../icon/eto_usagi_head.png" alt="うさぎ">
         </figure>
         <div class="chat-talk-left-ye">
-            <p>28行目から35行目に注目してください！<br>
+            <p>29行目から36行目に注目してください！<br>
             未来時刻 - 現在時刻の結果を配列として返すファンクションを実行後、<br>
             テンプレートリテラルを作成、htmlに反映させています。</p>   
         </div>
@@ -908,22 +892,20 @@
         </div>
     </div>
 <!--コード-->      
-<span class="file-type">JAVASCRIPT</span>          
-<pre class="prettyprint lang-js">
-    <span class="sup">//まとめてrecalc()にする</span>
-    <span class="marker">function recalc() {</span>
-    const counter = countdown(goal);
-    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
-    document.getElementById('timer').textContent = time;
-    <span class="sup">//refresh()を追加する</span>
-    <span class="marker">refresh();</span>
-    <span class="marker">}         </span>                        
-
-    <span class="sup">//setTimeoutメソッドの第1引数にrecalc、待ち時間に1000ミリ秒を指定</span>
-    <span class="marker">function refresh() {
-        setTimeout(recalc, 1000);        
-    }</span>
-</pre>
+<pre><code class="language-JavaScript">
+//まとめてrecalc()にする
+function recalc() {
+const counter = countdown(goal);
+const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+document.getElementById('timer').textContent = time;
+//refresh()を追加する
+refresh();
+}                     
+//setTimeoutメソッドの第1引数にrecalc、待ち時間に1000ミリ秒を指定
+function refresh() {
+    setTimeout(recalc, 1000);        
+}
+</code></pre>
 <p class="sample">残り時間<span id="timer3"></span></p>
 
 <!--さる（右）-->
@@ -988,15 +970,14 @@
 </div>
 
 <!--コード-->   
-<span class="file-type">JAVASCRIPT</span>             
-<pre class="prettyprint lang-js">
-<span class="sup">//まとめてrecalc()にする</span>
+<pre><code class="language-JavaScript">
+//まとめてrecalc()にする
 function recalc() {
 const counter = countdown(goal);
-<span class="sup">//String()関数、padStartメソッドを追加</span>
-const time = `${counter[1]}時間${counter[2]}分${<span class="marker">String(counter[3]).padStart(2, '0')</span>}秒`;
+//String()関数、padStartメソッドを追加
+const time = `${counter[1]}時間${counter[2]}分${String(counter[3]).padStart(2, '0')}秒`;
 document.getElementById('timer').textContent = time;
-<span class="sup">//refresh()を追加する</span>
+//refresh()を追加する
 refresh();
 }
 
@@ -1004,7 +985,7 @@ refresh();
 function refresh() {
     setTimeout(recalc, 1000);
 }
-</pre>
+</code></pre>
 
 <!--うさ（左）-->
 <div class="chat">    
@@ -1074,25 +1055,23 @@ function refresh() {
 </div>
 
 <!--コードHTML-->   
-<span class="file-type">HTML</span>             
-<pre class="prettyprint lang-js">
+<pre><code class="language-html">
 &lt;p class="lastyear" id="last">&lt;/p&gt;
-</pre>
+</code></pre>
 
 <!--コード-->   
-<span class="file-type">JAVASCRIPT</span>             
-<pre class="prettyprint lang-js">
-<span class="sup">//set～()メソッドを使って2023年12月31日23時59分59秒を設定する</span>
+<pre><code class="language-JavaScript">
+//set～()メソッドを使って2023年12月31日23時59分59秒を設定する
 const thisyear = new Date();
 thisyear.setFullYear(2023);
-<span class="sup">//0~11で設定する（0が1月）</span>
+//0~11で設定する（0が1月）
 thisyear.setMonth(11);
 thisyear.setDate(31);
 thisyear.setHours(23);
 thisyear.setMinutes(59);
 thisyear.setSeconds(59);
 
-<span class="sup">//get～()メソッドを使って2023年12月31日23時59分59秒を取得する</span>
+//get～()メソッドを使って2023年12月31日23時59分59秒を取得する
 const year = thisyear.getFullYear();
 const lastmonth = thisyear.getMonth() + 1;
 const lastday = thisyear.getDate();
@@ -1100,10 +1079,10 @@ const lasthour = thisyear.getHours();
 const lastminute = thisyear.getMinutes();
 const lastsecond = thisyear.getSeconds();
 
-<span class="sup">//テンプレートリテラルを作り、htmlに反映させる</span>
+//テンプレートリテラルを作り、htmlに反映させる
 const last = `${year}年${lastmonth}月${lastday}日 ${lasthour}：${lastminute}:${lastsecond}秒`;
 document.getElementById('last').textContent = last;
-</pre>
+</code></pre>
 
 <!--サンプル画面表示//set～メソッド使用-->
 <div class="sample">
@@ -1145,28 +1124,26 @@ document.getElementById('last').textContent = last;
 </div>
 
 <!--コードHTML-->   
-<span class="file-type">HTML</span>             
-<pre class="prettyprint lang-js">
+<pre><code class="language-html">
 &lt;p class="thisyear">
 &lt;span id="thisyear"&gt;&lt;/span&gt;年&lt;span id="thismonth"&gt;&lt;/span&gt;月&lt;span id="thisday"&gt;&lt;/span&gt;日 &lt;span id="thishour"&gt;&lt;/span&gt;：&lt;span id="thisminute"&gt;&lt;/span&gt;：&lt;span id="thissecond"&gt;&lt;/span&gt;
 &lt;/p&gt;
-</pre>
+</code></pre>
 
 <!--コード-->   
-<span class="file-type">JAVASCRIPT</span>             
-<pre class="prettyprint lang-js">
-<span class="sup">//new Date()の引数に2023年12月31日 23：59：59を設定する</span>
-<span class="sup">//0~11で設定する（0が1月）</span>
+<pre><code class="language-JavaScript">
+//new Date()の引数に2023年12月31日 23：59：59を設定する
+//0~11で設定する（0が1月）
 const thisyear = new Date(2023, 11, 31, 23, 59, 59);
 
-<span class="sup">//get～()メソッドを使って2023年12月31日23時59分59秒を取得し、htmlに反映させる</span>
+//get～()メソッドを使って2023年12月31日23時59分59秒を取得し、htmlに反映させる
 document.getElementById('thisyear').textContent = thisyear2.getFullYear();
 document.getElementById('thismonth').textContent = thisyear2.getMonth() + 1; 
 document.getElementById('thisday').textContent = thisyear2.getDate();
 document.getElementById('thishour').textContent = thisyear2.getHours();
 document.getElementById('thisminute').textContent = thisyear2.getMinutes();
 document.getElementById('thissecond').textContent = thisyear2.getSeconds();
-</pre>
+</code></pre>
 
 <!--サンプル画面表示-->
 <div class="sample">
@@ -1206,5 +1183,6 @@ document.getElementById('thissecond').textContent = thisyear2.getSeconds();
     <script src="../jquery-3.6.4.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="countdown.js"></script>
+    <script src="../prism.js"></script>
 </body>
 </html>
