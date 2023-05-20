@@ -222,7 +222,8 @@ samp.support {
 
   /*マーカー*/
   .marker {    
-    background-color: rgba(210, 236, 81, 0.941);       
+    background-color: rgba(210, 236, 81, 0.941);     
+    display: inline-block;  
   }
 
   /*テキスト強調・青*/
