@@ -30,13 +30,14 @@ a {
 /************************ヘッダーのメニュー************************************/
 
 .menu {
-  background-color: #ccc; /* メニューの背景色を灰色に */
+  background-color: rgba(137, 137, 136, 0.5);
 }
 
 .menu ul {
   list-style: none; /* リストマーカーを削除 */
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .menu li {
@@ -46,18 +47,70 @@ a {
 
 .menu a {
   display: block; /* リンクをブロック要素に */
-  color: #fff; /* リンクの文字色を白に */
+  color: #f0e8e8; /* リンクの文字色を白に */
   text-decoration: none; /* 下線を削除 */
   padding: 10px; /* リンクのパディングを設定 */
+  font-size: 13px;
+}
+/*********************************************************/
+/*画面1000px以下のヘッダー*/
+/*********************************************************/
+@media (max-width: 1000px) {
+  /*表示は縦*/
+  .menu {
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    /* right: 100%; */
+    z-index: 999;
+    background-color: rgba(65, 67, 56, 0.8);
+}  
+  .menu ul {
+    flex-direction: column;
+  }
+}
+.menu a {
+  color: #eee;
 }
 
-/*********************************************************/
+/*ハンバーガー*/
+.hamburger {
+  width: 40px;
+  height: 32px;
+  position: relative;
+  left: 90%;
+}
+.hamburger_bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  background: #000;
+}
+
+.hamburger_bar:nth-child(1) {
+  top: 0;
+}
+
+.hamburger_bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger_bar:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+/************************************************************/
 h1 {
     text-align: center;
     color: blue;
 }
 
-.conteiner {
+.container {
     margin: 0 auto;    
 }
 
@@ -84,9 +137,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 5px;
-  width: 90%;
+  gap: 15px;
+  width: 80%;
   margin: 0 auto;
+  padding: 0;
   text-decoration-style: none;
   list-style-type : none; 
 }
@@ -188,7 +242,7 @@ li a {
   border-style: solid;
   border-radius: 10px;
   max-width: calc(100% - 80px);
-  flex-grow: 1;
+  /* flex-grow: 1; */
   min-width: 0;
 }
 
@@ -384,8 +438,10 @@ samp {
     color: blue;
     padding: 5px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
   }  
-
+  
 .format {
     color: rgb(83, 28, 9);
     position: relative;
@@ -430,15 +486,6 @@ blockquote cite{
   font-size:0.8rem;
   color:#f39f78;
   text-align:right;
-}
-
-samp {
-  display: flex;
-  align-items: center;
-}
-
-samp.support {
-  margin-left: 10px;
 }
 
 /*ちょっと脳トレタイトルの装飾*/
