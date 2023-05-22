@@ -53,24 +53,29 @@ a {
   font-size: 13px;
 }
 /*********************************************************/
-/*画面1000px以下のヘッダー*/
+/*画面980px以下のヘッダー*/
 /*********************************************************/
-@media (max-width: 1000px) {
+@media (max-width: 980px) {
   /*表示は縦*/
   .menu {
-    width: 60%;
+    width: 40%;
     height: 100%;
     position: fixed;
     top: 0;
-    right: 0px;
-    /* right: 100%; */
+    right: -100%;
     z-index: 999;
     background-color: rgba(65, 67, 56, 0.8);
+    transition: right 0.8s ease-in-out;
 }  
+
+.menu.show {
+  right: 0;
+}
+
   .menu ul {
     flex-direction: column;
   }
-}
+
 .menu a {
   color: #eee;
 }
@@ -82,28 +87,44 @@ a {
   position: relative;
   left: 90%;
 }
-.hamburger_bar {
+.bar1, .bar2, .bar3 {
   display: block;
   width: 100%;
   height: 4px;
   position: absolute;
   left: 0;
-  background: #000;
+  background: #b0adad;
 }
 
-.hamburger_bar:nth-child(1) {
+/*3本線*/
+.bar1 {
   top: 0;
 }
 
-.hamburger_bar:nth-child(2) {
+.bar2 {
   top: 50%;
   transform: translateY(-50%);
 }
 
-.hamburger_bar:nth-child(3) {
+.bar3 {
   top: 100%;
   transform: translateY(-100%);
 }
+/*クリックされたときの3本線*/
+.bar1.open {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.bar2.open {
+  opacity: 0;
+}
+.bar3.open {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+}
+
 /************************************************************/
 h1 {
     text-align: center;
