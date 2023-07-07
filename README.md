@@ -1,5 +1,5 @@
 # JavaScript学んだことまとめ
-![first_top](https://github.com/YurikoWatanabe/git_test/assets/133960855/9a13536e-0dfb-4160-b31c-9aa182e3592c)
+![first_top](https://github.com/YurikoWatanabe/git_test/assets/133960855/9a13536e-0dfb-4160-b31c-9aa182e3592c)(https://yurikowatanabe.github.io/git_test/)
 
 ## 概要  
 「うさぎ」と「さる」がJavaScriptのコードを見ながら解説してくれるサイトです。   
