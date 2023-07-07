@@ -1,7 +1,5 @@
 # JavaScript学んだことまとめ
-<a href="https://yurikowatanabe.github.io/git_test/" target="_blank" rel="noopener noreferrer">
-  <img src="first_top.png" alt="first_top">
-</a>
+[![first_top](first_top.png)](https://yurikowatanabe.github.io/git_test/)
 ## 概要  
 「うさぎ」と「さる」がJavaScriptのコードを見ながら解説してくれるサイトです。   
 職業訓練の自由課題で制作しました。提出期限の兼ね合いで開発は途中でストップしていますが、現在新たにLaravelでリメイク中です。
