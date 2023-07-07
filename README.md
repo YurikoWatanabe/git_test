@@ -1,5 +1,5 @@
 # JavaScript学んだことまとめ
-[![first_top](first_top.png)](https://yurikowatanabe.github.io/git_test/)
+[![first_top](first_top.png)](https://yurikowatanabe.github.io/git_test/){:target="_blank" rel="noopener noreferrer"}
 
 ## 概要  
 「うさぎ」と「さる」がJavaScriptのコードを見ながら解説してくれるサイトです。   
