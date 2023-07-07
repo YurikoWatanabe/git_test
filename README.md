@@ -28,8 +28,6 @@ Prism.js
 ## URL  
 https://yurikowatanabe.github.io/git_test/
 
-
-
 ## リメイク中のアプリのリポジトリ
 https://github.com/BPkuma/myportfolio
 
